@@ -1,0 +1,48 @@
+
+<app-header align="center" titulo="Iglesias"> </app-header>
+
+<ion-content >
+  
+  <ion-grid fixed >
+    <ion-row >
+
+      <ion-col  class="col" size="12" size-lg="3" size-md="4" size-sm="6" size-xs="12"
+              *ngFor="let listaiglesias of listaiglesias">
+         <!-- <ion-slides [options]="slideOpts"> -->
+           <!-- <ion-slide  -->
+            
+              <ion-card class="card" (click)="irADetalle(listaiglesias)">
+                
+
+                <img class="img" src={{listaiglesias.foto_portada}}>    
+                    <!-- <img [src]="listahoteles.foto_portada | imagen"> -->
+                    <ion-card-header  class="ion-no-padding">      
+                      <hr><ion-card-title class="title">  {{listaiglesias.nombre}}</ion-card-title>
+                    </ion-card-header>
+                       <ion-segment>
+                         <ion-segment>
+                            
+                            <ion-icon color="location" class="icon_h" name="location-outline"></ion-icon>
+                            <ion-label class="horario"> {{listaiglesias.Direccion}}</ion-label> 
+                           
+                         </ion-segment>
+                         
+                       </ion-segment>
+
+                
+
+                    <ion-item>
+                      <ion-button color="secondary"> Saber Más</ion-button>
+                    </ion-item>
+              </ion-card>
+              
+             
+           <!-- </ion-slide> -->
+          <!-- </ion-slides> -->
+
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>

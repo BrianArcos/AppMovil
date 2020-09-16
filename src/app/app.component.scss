@@ -1,0 +1,35 @@
+* {
+    font-family: lato;
+}
+
+.menu-header-bg {
+    height: 185px;
+    width: 350px;
+    background-color: #e2600ad7;
+    background: linear-gradient(90deg, #e2600ad7 0%, #440dacf5 100%);
+    box-shadow: 0px 1px 10px rgba(36, 5, 139, 0.76);
+    transform: rotate(-15deg);
+    border-radius: 10px 10px 10px 50px;
+    margin-left: -18px;
+    margin-top: -50px;
+    margin-bottom: 60px;
+}
+
+.header-content {
+    position: absolute;
+    top: -45px;
+    left: 35px;
+    display: flex;
+    align-items: center;
+    
+    img {
+        width: 220px;
+        height: 220px;
+        
+    }
+}
+.icon{
+    width: 37px;
+    height: 37px;
+    margin: 9px;
+}

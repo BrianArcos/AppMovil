@@ -1,0 +1,31 @@
+
+
+<app-header align="center" titulo= "alimentacion"></app-header> 
+
+<ion-content  class="card-background-page">
+  <ion-item-divider color="danger"></ion-item-divider>
+    <ion-grid >
+  
+      <ion-row >
+  
+             <ion-col size="12" size-lg="6" size-md="6" size-sm="6" size-xs="12">                                 
+                      <ion-card  [routerLink]="['/restaurantes']">               
+                        <img src="https://firebasestorage.googleapis.com/v0/b/tulcan-be024.appspot.com/o/Portadas%2FRestaurantes.jpg?alt=media&token=efe8e2bb-6beb-4d62-bbe8-1f4207b92346" />   
+                          <div class="card-title">Restaurantes</div>
+                          <div class="card-subtitle">15 restaurantes</div>
+                      </ion-card>
+             </ion-col>               
+  
+             <ion-col size="12" size-lg="6" size-md="6" size-sm="6" size-xs="12" >
+                      <ion-card [routerLink]="['/cafeterias']">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/tulcan-be024.appspot.com/o/Portadas%2FCafeterias.jpg?alt=media&token=49eeb828-c986-4180-8215-bae1bd1fddd5"/>
+                          <div class="card-title">Cafeterías</div>
+                          <div class="card-subtitle">4 Cafeterias</div>
+                      </ion-card>
+             </ion-col>
+  
+        </ion-row>
+    </ion-grid>
+    
+  </ion-content>
+  

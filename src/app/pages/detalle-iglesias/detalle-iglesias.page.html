@@ -1,0 +1,51 @@
+
+    
+  <app-header></app-header> 
+  
+    
+  
+
+    <ion-content>
+      
+       
+      <ion-col  >
+      <ion-card class="card">
+      <ion-label>
+        <img  src={{lista_I.foto_portada}}>  
+      </ion-label>
+      
+    </ion-card>
+      
+    </ion-col>
+      
+      <!-- <ion-icon class="item" name="logo-facebook" (click)="openWeb(lista.facebook,'_system')">Pagina web</ion-icon> -->
+     
+          
+          <ion-list>
+            <ion-card>
+              <p> <h2 class="title_desc"> Descripción</h2> 
+                <ion-label class="descripcion" >{{lista_I.Descripcion|slice:0: oculto}}... </ion-label>
+                <ion-label color="primary"
+                (click)="oculto = 5000"
+                *ngIf="oculto !==5000">Leer más! </ion-label>
+    
+              <ion-item>
+                <ion-label ><ion-icon  class="title" color="location" class="size" name="location-outline"></ion-icon> {{lista_I.Direccion}} </ion-label>
+                
+              </ion-item>
+              
+              
+              
+              
+              
+               <!-- <p> <h2>Descripción</h2> 
+                <ion-label class="descripcion" >{{lista.descripcion}} </ion-label> -->
+              
+              
+            </ion-card>
+            
+          </ion-list>
+          
+    
+    </ion-content>
+     

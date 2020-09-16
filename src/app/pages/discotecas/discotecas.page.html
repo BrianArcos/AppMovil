@@ -1,0 +1,52 @@
+
+<app-header align="center" titulo="Discotecas"> </app-header>
+
+<ion-content  class="ion-no-border"
+              class="ion-no-margin"
+              class="ion-no-padding">
+    <ion-grid class="ion-no-padding">
+
+      <ion-row >
+   
+        <ion-col 
+                *ngFor="let listadiscotecas of listadiscotecas " 
+                size="12" size-lg="3" size-md="4" size-sm="6" size-xs="12">
+                <ion-card (click)="irADetalle(listadiscotecas)" >
+                  <img class="img" src={{listadiscotecas.foto_portada}}>    
+                  <!-- <img [src]="listahoteles.foto_portada | imagen"> -->
+                  <ion-card-header  class="ion-no-padding">      
+                    <hr><ion-card-title class="title">  {{listadiscotecas.nom_estable}}</ion-card-title>
+                  </ion-card-header>
+                     <ion-segment>
+                       <ion-segment>
+                          
+                          <ion-icon color="email" class="icon_h" name="alarm"></ion-icon>
+                          <ion-label class="horario"> {{listadiscotecas.horario}}</ion-label> 
+                         
+                       </ion-segment>
+                       <ion-segment >
+                         
+                          <ion-icon color="call" class="icon_p" name="logo-usd"></ion-icon>
+                          <ion-label class="precio"> {{listadiscotecas.rango_precio}}</ion-label> 
+                         
+                       </ion-segment>
+                     </ion-segment>
+
+                    <ion-card-subtitle > 
+                      <ion-icon color="location" class="icon_d" name="pin"></ion-icon>
+                    <ion-label class="direccion">{{listadiscotecas.direccion}}</ion-label> 
+                  </ion-card-subtitle>
+
+                  <ion-item>
+                    <ion-button color="secondary"> Saber Más</ion-button>
+                  </ion-item> </ion-card>
+  
+        </ion-col>
+
+
+          </ion-row>
+        </ion-grid>
+
+
+</ion-content>
+

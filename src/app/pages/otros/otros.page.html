@@ -1,0 +1,29 @@
+
+<app-header align="center" titulo="Servicios Generales"> </app-header>
+
+<ion-content >
+  
+  
+
+      <!-- <ion-col  class="col" size="12" size-lg="3" size-md="4" size-sm="6" size-xs="12"
+              *ngFor="let listaotros of listaotros"> -->
+         <!-- <ion-slides [options]="slideOpts"> -->
+           <!-- <ion-slide  -->
+              
+              <ion-card *ngFor="let listaotros of listaotros"(click)="irADetalle(listaotros)">
+                <ion-item>
+                  <ion-avatar class="img" slot="start">
+                    <img  src={{listaotros.foto_portada}}>
+                  </ion-avatar>
+                  <ion-label>
+                    <h2>{{listaotros.nombre}}</h2>
+                    <p>{{listaotros.Direccion}}</p>
+                  </ion-label>
+                </ion-item>
+                
+
+              </ion-card>
+              
+    
+
+</ion-content>

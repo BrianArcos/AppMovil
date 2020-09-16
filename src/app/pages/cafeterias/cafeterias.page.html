@@ -1,0 +1,52 @@
+
+<app-header align="center" titulo="Cafeterias"> </app-header>
+
+<ion-content >
+    <ion-grid fixed >
+
+      <ion-row >
+   
+        <ion-col 
+                *ngFor="let listacafeterias of listacafeterias " 
+                size="12" size-lg="4" size-md="4" size-sm="6" size-xs="12">
+               
+                <ion-card (click)="IrAdetalle(listacafeterias)" >
+                 
+                  <img class="img" src={{listacafeterias.foto_portada}}>    
+                  <!-- <img [src]="listahoteles.foto_portada | imagen"> -->
+                  <ion-card-header  class="ion-no-padding">      
+                    <hr><ion-card-title class="title">  {{listacafeterias.nom_estable}}</ion-card-title>
+                  </ion-card-header>
+                     <ion-segment>
+                       <ion-segment>
+                          
+                          <ion-icon color="email" class="icon_h" name="alarm"></ion-icon>
+                          <ion-label class="horario"> {{listacafeterias.horario}}</ion-label> 
+                         
+                       </ion-segment>
+                       <ion-segment >
+                         
+                          <ion-icon color="call" class="icon_p" name="logo-usd"></ion-icon>
+                          <ion-label class="precio"> {{listacafeterias.rango_precio}}</ion-label> 
+                         
+                       </ion-segment>
+                     </ion-segment>
+
+                    <ion-card-subtitle > 
+                      <ion-icon color="location" class="icon_d" name="pin"></ion-icon>
+                    <ion-label class="direccion">{{listacafeterias.direccion}}</ion-label> 
+                  </ion-card-subtitle>
+
+                  <ion-item>
+                    <ion-button color="secondary"> Saber Más</ion-button>
+                  </ion-item></ion-card>
+  
+        </ion-col>
+
+
+      </ion-row>
+    </ion-grid>
+
+
+</ion-content>
+

@@ -1,0 +1,45 @@
+<ion-app>
+  <ion-menu menuId="main-menu" contentId="main">
+    <ion-content>
+      <div class="menu-header-bg"></div>
+      <div class="header-content">
+      <img src="/assets/header/logotipo1.svg" >
+    </div>
+       <ion-list>
+         <ion-menu-toggle>
+         <ion-item routerLink="/inicio">
+          <ion-icon slot="start" name="home" color="header"></ion-icon>Inicio
+         </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+         <ion-item routerLink="/historia">
+          <ion-icon slot="start" name="Wine" color="header"></ion-icon>Sobre Tulcán
+        </ion-item>
+      </ion-menu-toggle>
+      <ion-menu-toggle>
+        <ion-item routerLink="/mapa">
+          <ion-icon slot="start" name="Map" color="header"></ion-icon>Mapa Tulcán
+        </ion-item>
+      </ion-menu-toggle>
+         
+
+       </ion-list>
+       <ion-item lines="none"> 
+         <ion-label color="header">Siguenos</ion-label>
+        </ion-item>
+          <ion-item lines="none">
+            <ion-buttons (click)="facebook()">
+            <ion-icon class="icon" color="facebook" name="logo-facebook"></ion-icon>
+          </ion-buttons>
+          <ion-buttons (click)="histagram()">
+            <ion-icon class="icon" color="location" name="logo-instagram"></ion-icon>
+          </ion-buttons>  
+           <ion-buttons href="whatsapp//send?phone=593988560221">
+            <ion-icon class="icon" color="whatsapp" name="logo-whatsapp"></ion-icon>        
+          </ion-buttons>
+          </ion-item>
+        
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet Id="main"></ion-router-outlet>
+</ion-app>

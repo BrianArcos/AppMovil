@@ -1,0 +1,146 @@
+<ion-header  translucent>
+  <ion-toolbar color="header" >
+     
+    <ion-buttons slot="start">
+      <ion-menu-button class="size" menu="main-menu"></ion-menu-button>
+      <ion-title slot="start" class="ion-no-margin" class="ion-no-border" class="ion-no-padding">Inicio</ion-title>
+      <div class="formHeader" color="talkColor">  
+        <div class="tituloTab" align="center"><ion-img  class="logo" src="/assets/header/logotipo1.svg" ></ion-img></div>
+        </div>
+    </ion-buttons>
+    
+    
+      <!-- <ion-img  class="logo" src="/assets/header/logotipo.png" ></ion-img> -->
+       
+      <ion-img class="size" class="call" src="/assets/header/telapp.svg"></ion-img>
+      <ion-icon  slot="end" name="moon"> </ion-icon>
+      <ion-toggle slot="end"
+                      [ngModel]="darkMode" 
+                      (ionChange)="cambio()"></ion-toggle>
+  </ion-toolbar>
+  
+  
+</ion-header>
+
+
+
+<ion-content fullscreen 
+            class="ion-no-border"
+             class="ion-no-margin"
+             class="ion-no-padding" 
+             class="card-background-page">
+
+<!-- <ion-list>
+  <ion-item>
+    <ion-icon slot="start" name="moon"> </ion-icon>
+    <ion-label>Modo Oscuro</ion-label>
+    <ion-toggle slot="end"
+                [ngModel]="darkMode" 
+                (ionChange)="cambio()"></ion-toggle>
+  </ion-item>
+</ion-list> -->
+
+             <ion-slides pager="true" [options]="slideOpts">
+              <ion-slide>
+                <ion-img src="/assets/banner/Cementerio.png"></ion-img>
+              </ion-slide>
+            
+              <ion-slide>
+                <ion-img src="/assets/banner/Lagunasverdes.png"></ion-img>
+              </ion-slide>
+            
+              <ion-slide>
+                <ion-img src="/assets/banner/Tulcan.png"></ion-img>
+              </ion-slide>
+            
+            </ion-slides>
+
+            
+           
+  <ion-grid class="ion-no-padding"
+            class="ion-no-border">
+
+    <ion-row >
+
+      <ion-col *ngFor="let slide of slides " [routerLink]="[slide.id]" 
+              size="12" size-lg="3" size-md="4" size-sm="6" size-xs="12">
+              <ion-card class="ion-no-border"
+                        class="ion-no-padding"
+                        class="ion-no-margin" mode="ios">
+                
+                <img  [src]="slide.img">
+                <div class="card-title" >{{slide.titulo}}</div>
+                <div class="card-subtitle">{{slide.subt}}</div>
+                
+              </ion-card>
+
+      </ion-col>
+
+
+
+
+
+
+           <!--<ion-col size="12" size-lg="3" size-md="4" size-sm="6" size-xs="12">                                 
+                    <ion-card [routerLink]="['/alojamiento']">               
+                      <img src="https://www.elgurudeviajes.com/wp-content/uploads/2017/04/cuarto.jpg" />   
+                        <div class="card-title">Alojamiento</div>
+                        <div class="card-subtitle">41 Listings</div>
+                    </ion-card>
+           </ion-col>               
+
+           <ion-col size="12" size-lg="3" size-md="4" size-sm="6" size-xs="12" >
+                    <ion-card [routerLink]="['/alimentacion']">
+                      <img src="https://cdni.rt.com/actualidad/public_images/2018.03/thumbnail/5abe177908f3d9112f8b4569.jpg"/>
+                        <div class="card-title">Alimentación</div>
+                        <div class="card-subtitle">64 Listings</div>
+                    </ion-card>
+           </ion-col>
+           <ion-col size="12" size-lg="3" size-md="4" size-sm="6" size-xs="12">
+                    <ion-card [routerLink]="['/espar']">
+                      <img src="https://media.metrolatam.com/2020/03/12/discotecassuspen-d601b0f4620be1ada0b6fa7e5bc77f38-800x400.jpg"/>
+                        <div class="card-title">Esparcimiento</div>
+                        <div class="card-subtitle">72 Listings</div>
+                    </ion-card>
+           </ion-col>
+
+            <ion-col size="12" size-lg="3" size-md="4" size-sm="6" size-xs="12">
+                    <ion-card [routerLink]="['/turismo']">
+                       <img src="https://chipviajero.com/wp-content/uploads/2018/10/Como-Llegar-Al-Santuario-De-Las-Lajas-En-Ipiales-Colombia-Chip-Viajero-7.jpg"/>
+                        <div class="card-title">Sitios Turísticos</div>
+                        <div class="card-subtitle">28 Listings</div>
+                    </ion-card>
+            </ion-col>
+
+            <ion-col size="12" size-lg="3" size-md="4" size-sm="6" size-xs="12">
+                    <ion-card [routerLink]="['/operadores']">
+                       <img src="https://www.ceupe.com/images/easyblog_articles/1407/b2ap3_large_concepto-operador-turistico.jpg"/>
+                        <div class="card-title">Operadores Turísticos</div>
+                        <div class="card-subtitle">28 Listings</div>
+                    </ion-card>
+            </ion-col>
+
+            <ion-col size="12" size-lg="3" size-md="4" size-sm="6" size-xs="12">
+                     <ion-card [routerLink]="['/transporte']">
+                       <img src="https://scontent.fuio17-1.fna.fbcdn.net/v/t1.0-9/s960x960/51496098_820931451576621_6614822047606374400_o.jpg?_nc_cat=111&_nc_sid=0be424&_nc_ohc=a1wnF2fhvGYAX_98ESb&_nc_ht=scontent.fuio17-1.fna&_nc_tp=7&oh=c18bf6ff759b7c32196d45b390397fdd&oe=5EBD0040"/>
+                         <div class="card-title">Trasporte</div>
+                         <div class="card-subtitle">28 Listings</div>
+                     </ion-card>
+            </ion-col>
+
+            <ion-col size="12" size-lg="3" size-md="4" size-sm="6" size-xs="12">
+                      <ion-card [routerLink]="['/bienvenida']">
+                       <img src="https://www.eluniverso.com/sites/default/files/styles/powgallery_1280/public/fotos/2019/12/-_whatsapp_image_2019-10-15_at_12.12.13_pm_33098732.jpg?itok=8aPgcUbD"/>
+                         <div class="card-title">Sitios de interes</div>
+                         <div class="card-subtitle">28 Listings</div>
+                      </ion-card>
+            </ion-col>-->
+ 
+     </ion-row>
+
+  </ion-grid>
+
+  
+
+</ion-content >
+

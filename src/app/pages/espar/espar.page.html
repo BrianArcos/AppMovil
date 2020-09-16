@@ -1,0 +1,29 @@
+
+<app-header align="center" titulo="Esparcimiento"> </app-header>
+
+<ion-content  class="card-background-page">
+
+  <ion-grid >
+
+    <ion-row >
+
+           <ion-col size="12" size-lg="6" size-md="6" size-sm="6" size-xs="12">                                 
+                    <ion-card  [routerLink]="['/discotecas']">               
+                      <img src="https://firebasestorage.googleapis.com/v0/b/tulcan-be024.appspot.com/o/Portadas%2Fdiscotecas.jpg?alt=media&token=fa1b96ab-c6af-43d2-b353-8d89c0a18f2b" />   
+                        <div class="card-title">Discotecas</div>
+                        <div class="card-subtitle">2 Discotecas</div>
+                    </ion-card>
+           </ion-col>               
+
+           <ion-col size="12" size-lg="6" size-md="6" size-sm="6" size-xs="12" >
+                    <ion-card [routerLink]="['/bares']">
+                      <img src="https://firebasestorage.googleapis.com/v0/b/tulcan-be024.appspot.com/o/Portadas%2Fbares.jpg?alt=media&token=ad9e0907-0a7b-4074-a302-506b4177b049"/>
+                        <div class="card-title">Bares</div>
+                        <div class="card-subtitle">3 Bares</div>
+                    </ion-card>
+           </ion-col>
+
+      </ion-row>
+  </ion-grid>
+  
+</ion-content>
